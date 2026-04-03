@@ -1,0 +1,254 @@
+:root {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1f2937;
+  background:
+    radial-gradient(circle at top left, rgba(255, 214, 165, 0.9), transparent 28%),
+    radial-gradient(circle at right, rgba(147, 197, 253, 0.8), transparent 32%),
+    linear-gradient(180deg, #fffdf7 0%, #f5f7fb 100%);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.05;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 16px 0 0;
+  color: #4b5563;
+  font-size: 18px;
+}
+
+.panel {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.upload-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.upload-box {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 247, 237, 0.9), rgba(239, 246, 255, 0.95));
+}
+
+.upload-box input {
+  width: 100%;
+}
+
+.primary-btn,
+.secondary-btn {
+  width: fit-content;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-btn {
+  background: #111827;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #e5eefc;
+  color: #1e3a8a;
+}
+
+.primary-btn:disabled,
+.secondary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary-btn:not(:disabled):hover,
+.secondary-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.status-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 10px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.progress-track {
+  overflow: hidden;
+  height: 10px;
+  border-radius: 999px;
+  background: #dbe4f0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f97316 0%, #2563eb 100%);
+  transition: width 0.35s ease;
+}
+
+.status-tag {
+  display: inline-flex;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.job-id {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.error-text {
+  margin: 0;
+  color: #b91c1c;
+}
+
+.preview-panel {
+  padding: 24px;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.preview-label {
+  margin: 0 0 4px;
+  color: #9ca3af;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.preview-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.download-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filename-input {
+  width: min(260px, 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: #fff;
+  color: #111827;
+}
+
+.empty-state {
+  padding: 56px 20px;
+  border-radius: 20px;
+  background: #f8fafc;
+  color: #64748b;
+  text-align: center;
+}
+
+.markdown-body {
+  padding: 28px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  color: #111827;
+}
+
+.markdown-body p,
+.markdown-body li {
+  color: #374151;
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100% - 24px, 100%);
+    padding-top: 28px;
+  }
+
+  .preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .download-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filename-input {
+    width: 100%;
+  }
+}
